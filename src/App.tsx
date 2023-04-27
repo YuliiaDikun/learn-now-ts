@@ -10,8 +10,7 @@ import SharedLayout from './components/SharedLayout/SharedLayout';
 const MainPage = lazy(() => import("./pages/Home/Home"));
 const CoursePage = lazy(() => import("./pages/Course/Course"));
 
-
-function App() {
+export function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
