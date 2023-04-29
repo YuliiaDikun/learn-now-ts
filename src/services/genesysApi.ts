@@ -23,20 +23,20 @@ class WiseyAPI {
     }
   }
 
-  async getCourses(): Promise<any> {
+  async getCourses() {
     try {
       await this.getToken();
-      const res: AxiosResponse<any> = await axios.get(`${this.baseURL}/core/preview-courses`);
+      const res = await axios.get(`${this.baseURL}/core/preview-courses`);
       return res.data;
     } catch (error) {
       toast.error("Something goes wrong.");
     }
   }
 
-  async getCourseById(id: number): Promise<any> {
+  async getCourseById(id: number) {
     try {
       await this.getToken();
-      const res: AxiosResponse<any> = await axios.get(`${this.baseURL}/core/preview-courses/${id}`);
+      const res = await axios.get(`${this.baseURL}/core/preview-courses/${id}`);
       return res.data;
     } catch (error) {
       toast.error("Something goes wrong.");
