@@ -1,7 +1,5 @@
 import { StyledP } from "./SkillsList.styled";
-interface ISkillProp {
-  skills: string[] | null;
-}
+import { ISkillProp } from "../../interfaces/Skills";
 const SkillsList: React.FC<ISkillProp> = ({ skills }) => {    
   return (
     <ul>

@@ -3,8 +3,7 @@ import { VideoJsPlayer } from 'video.js';
 import throttle from 'lodash.throttle';
 import { ImBlocked } from 'react-icons/im';
 import VideoJS from '../VideoJS/VideoJS';
-
-import { ILessonItem } from '../../interfaces/Courses';
+import { LessonProps, IProgressBarStyles } from '../../interfaces/Courses';
 import {
   VideoItem,
   LessonTitle,
@@ -14,19 +13,6 @@ import {
   ProgressBarContainer,
   ProgressBar,
 } from './Lesson.styled';
-
-interface LessonProps {
-  lesson: ILessonItem;
-  i: number;
-  openLesson: string;
-  toggleLessonVideo: (id: string | 'locked') => void;
-}
-
-interface IProgressBarStyles { 
-  width?: string;
-  backgroundColor?: string;
-  boxShadow?: string;
-}
 
 const Lesson: React.FC<LessonProps> = ({
   lesson,

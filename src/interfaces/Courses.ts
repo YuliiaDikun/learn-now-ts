@@ -10,6 +10,12 @@ export interface ILessonItem {
   type?: string;
 }
 
+export interface ILessonListProp {  
+  lessons: ILessonItem[];
+  openLesson: string;
+  toggleLessonVideo: (lessonId: string) => void;
+}
+
 export interface ICoursesItem {
   id: string;
   title: string;
@@ -36,4 +42,21 @@ export interface ICoursesItem {
 
 export interface ICoursesList {
   memoCourses: ICoursesItem[];
+}
+
+export interface LessonProps {
+  lesson: ILessonItem;
+  i: number;
+  openLesson: string;
+  toggleLessonVideo: (id: string | 'locked') => void;
+}
+
+export interface IProgressBarStyles { 
+  width?: string;
+  backgroundColor?: string;
+  boxShadow?: string;
+}
+
+export interface CourseItemProps { 
+  course: ICoursesItem
 }

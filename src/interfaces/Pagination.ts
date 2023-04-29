@@ -5,3 +5,10 @@ export interface IPaginationProps {
   currentPage: number;
   pageSize: number;
 }
+
+export interface IPaginationPropsHook {
+  totalCount: number;
+  pageSize: number;
+  siblingCount?: number;
+  currentPage: number;
+};

@@ -2,7 +2,6 @@ import CourseItem from "../CourseItem/CourseItem";
 import { StyledList } from "./CourseList.styled";
 import { ICoursesList } from "../../interfaces/Courses";
 
-
 const CourseList: React.FC<ICoursesList> = ({ memoCourses }) => {
   return (
     <StyledList>

@@ -1,10 +1,5 @@
 import { useMemo } from "react";
-type PaginationProps = {
-  totalCount: number;
-  pageSize: number;
-  siblingCount?: number;
-  currentPage: number;
-};
+import { IPaginationPropsHook } from "../interfaces/Pagination";
 
 const range = (start:number, end:number) => {
   const length = end - start + 1;
@@ -18,7 +13,7 @@ export const usePagination = ({
   pageSize,
   siblingCount = 1,
   currentPage,
-}: PaginationProps) => {
+}: IPaginationPropsHook) => {
   const ALL_PAGE = 5;
   const paginationRange = useMemo(() => {
     const totalPageCount = Math.ceil(totalCount / pageSize);

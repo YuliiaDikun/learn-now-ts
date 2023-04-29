@@ -1,10 +1,7 @@
 import React from 'react';
 import SkillsList from '../SkillsList/SkillsList';
 import { StyledSkills } from './Skill.styled';
-
-interface ISkillProp {
-  skills: string[] | null;
-}
+import { ISkillProp } from '../../interfaces/Skills';
 
 const Skill: React.FC<ISkillProp> = ({ skills = null }) => {
   if (!skills)

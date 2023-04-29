@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import videojs, { VideoJsPlayer } from "video.js";
 import { useLocation } from "react-router-dom";
+import { CourseItemProps } from "../../interfaces/Courses";
 import { MdOutlinePlayLesson } from "react-icons/md";
 import { FcRating } from "react-icons/fc";
 import VideoJS from "../VideoJS/VideoJS";
@@ -13,11 +14,6 @@ import {
   CourseText,
   RatingWrapper,  
 } from "./CourseItem.styled";
-import { ICoursesItem } from "../../interfaces/Courses";
-
-interface CourseItemProps { 
-  course: ICoursesItem
-}
 
 const CourseItem:React.FC<CourseItemProps> = ({ course }) => {  
   const playerRef = useRef<null | VideoJsPlayer>(null);
