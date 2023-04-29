@@ -33,7 +33,7 @@ class WiseyAPI {
     }
   }
 
-  async getCourseById(id: number) {
+  async getCourseById(id: string) {
     try {
       await this.getToken();
       const res = await axios.get(`${this.baseURL}/core/preview-courses/${id}`);
